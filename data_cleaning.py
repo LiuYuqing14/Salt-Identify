@@ -1,22 +1,15 @@
-import os, sys, random, warnings, math
+import os, sys, random
 
-import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 
-from tqdm.auto import tqdm, trange
-from itertools import chain
+from tqdm.auto import tqdm
 
-from skimage.io import imread, imshow, concatenate_images
 from skimage.transform import resize
-from skimage.morphology import label
 from tensorflow.keras.utils import load_img, img_to_array, array_to_img
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 import tensorflow as tf
-from tensorflow.keras import backend as K
-from tensorflow.keras import models, Input, layers, callbacks, utils, optimizers
+from tensorflow.keras import models, Input
 
 from sklearn.model_selection import train_test_split
 
