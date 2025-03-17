@@ -36,3 +36,13 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
 - Result:
   - The Xception encoder much better than all the models I have trained. Learning from the paper *Xception: Deep Learning with Depthwise Separable Convolutions*，the additional inception modules helps a lot. It reduces dimension, which is via a set of 1x1 convolutions, mapping the input data into 3 or 4. However, I still have questions on this strategy since how does correlations can be mapped completely separately, and it indeed leading a simpler computation, but how precise it can be through lower dim? I will investigate more on that...
   - <img alt="Xception" height="150" src="output_image/Xception.png" width="250"/>
+
+### Experiment 3: Appling pseudo labels to trainig set 
+
+- files: [Pseudo_Label](https://github.com/LiuYuqing14/Salt-Image-Segmentation/blob/main/Pseudo_Labels.ipynb)
+- Inspired by paper *Iterative ensemble pseudo-labeling for convolutional neural networks*
+- Pseudo Labels is a kind of Semi-Supervised Learning method, with real labels and pseudo labels to train the model. I thought it works since I have mensioned there are limited dataset and the process of training will bring incorrect labels, pseudo labels will bring new samples, which works like reinforcing the model..?
+
+## Experiment I plan to do later:
+- Stochastic Weight Averaging (SWA) It has been shown in recent paper that SWA finds much broader optima than SGD. Using SWA in the customized callbacks funtions probaly works.
+- I saw there are people shared their ideas, which mensioned to use Normalized Gradient optimizer on each layer of the mini-batch stochastic gradient.
