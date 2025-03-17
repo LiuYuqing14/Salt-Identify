@@ -16,7 +16,7 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
   - <img alt="learing rate" height="300" src="output_image/learning%20rate.png" width="600"/>
 - Reflection:
   - The incorrect labeling appears since there are limited training set and imbalanced set. We can not simply dividing set according to the percentage like the image below. The boundaries has very little percentage, and I infer there are catastrophic cancellation caused by computer during computation.
-  - <img alt="reflect" height="300" src="output_image/reflect.png" width="600"/>
+  - <img alt="reflect" height="300" src="output_image/reflect.jpg" width="600"/>
   
 ### Experiment Name: Which Encoder-Decoder Architecture workes best?
 
