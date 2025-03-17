@@ -5,7 +5,7 @@
 which is a set of images are 101 x 101 pixels and each pixel is classified as either salt or sediment.
 
 ## Experiment I did:
-### Experiment Name: CNN segmentation identifying salt 
+### Experiment 1: CNN segmentation identifying salt 
 
 - Files: [data_cleaning](https://github.com/LiuYuqing14/Salt-Image-Segmentation/blob/main/data_cleaning.py), [model_construction](https://github.com/LiuYuqing14/Salt-Image-Segmentation/blob/main/model_construct.py), and [data_evaluation](https://github.com/LiuYuqing14/Salt-Image-Segmentation/blob/main/model_evaluation.py)
 - CNN model parameters:
@@ -19,9 +19,9 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
   - The incorrect labeling appears since there are limited training set and imbalanced set. We can not simply dividing set according to the percentage like the image below. The boundaries has very little percentage, and I infer there are catastrophic cancellation caused by computer during computation.
   - <img alt="reflect" height="300" src="output_image/reflect.jpg" width="300"/>
   
-### Experiment Name: Which Encoder-Decoder Architecture workes best?
+### Experiment 2: Which Encoder-Decoder Architecture workes best?
 
-- files: 
+- files: [encoder_Xception](https://github.com/LiuYuqing14/Salt-Image-Segmentation/blob/main/encoder_Xception.py), [different_architecture_decoder](https://github.com/LiuYuqing14/Salt-Image-Segmentation/blob/main/reordering_decoder.py)
 - Model 1 (inspired by [Mr.ybabakhin's work](https://github.com/ybabakhin/kaggle_salt_bes_phalanx/tree/master))
   - input 101 -> pad to 512
   - Encoder:ResNet34
@@ -32,5 +32,7 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
   - Decoder: conv3x3 + BN, Upsampling, scSE
   - (PS: I haven't run the entire models above because of time and technic limitation, but I tested partical of encoder part and combine with the conclusion from Mr.ybabakhin.)
 - Model 3 (inspired by [this work](https://www.kaggle.com/code/meaninglesslives/getting-0-87-on-private-lb-using-kaggle-kernel/notebook))
-  - 
-- Result: 
+  - This model is similar to model1 with same residual block and convolution block, but used Xception as the encoder block, the decoder block is only changed with activation function, but also extended the target into 160(not 101 as original).
+- Result:
+  - The Xception encoder much better than all the models I have trained. Learning from the paper *Xception: Deep Learning with Depthwise Separable Convolutions*，the additional inception modules helps a lot. It reduces dimension, which is via a set of 1x1 convolutions, mapping the input data into 3 or 4. However, I still have questions on this strategy since how does correlations can be mapped completely separately, and it indeed leading a simpler computation, but how precise it can be through lower dim? I will investigate more on that...
+  - <img alt="Xception" height="150" src="output_image/Xception.png" width="250"/>
