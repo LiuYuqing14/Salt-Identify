@@ -13,4 +13,8 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
   - ResNet architecture and intersection-over-union (IoU) score evaluation
 - result:
   - <img alt="threshold" height="300" src="output_image/best%20thereshold.png" width="500"/>
-  
+  - <img alt="learing rate" height="300" src="output_image/learning%20rate.png" width="600"/>
+
+### Experiment Name: Which Encoder-Decoder Architecture workes best?
+
+- files: 
