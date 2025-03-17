@@ -12,6 +12,7 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
   - optimizer = 'adam', Relu activation function
   - ResNet architecture and intersection-over-union (IoU) score evaluation
 - Result:
+  - 0.803 Public LB (0.812 Private LB)
   - <img alt="threshold" height="150" src="output_image/best%20thereshold.png" width="250"/>
   - <img alt="learing rate" height="150" src="output_image/learning%20rate.png" width="300"/>
 - Reflection:
@@ -21,3 +22,14 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
 ### Experiment Name: Which Encoder-Decoder Architecture workes best?
 
 - files: 
+- Model 1 (inspired by [Mr.ybabakhin's work](https://github.com/ybabakhin/kaggle_salt_bes_phalanx/tree/master))
+  - input 101 -> pad to 512
+  - Encoder:ResNet34
+  - Decoder: conv3x3 + BN, Upsampling, scSE
+- Model 2
+  - input 101 -> resize to 512
+  - Encoder: ResNet34
+  - Decoder: conv3x3 + BN, Upsampling, scSE
+(PS: I haven't run the entire models above because of time and technic limitation, but I tested partical of encoder part and combine with the conclusion from Mr.ybabakhin.)
+- Model 3
+  - 
