@@ -12,11 +12,11 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
   - optimizer = 'adam', Relu activation function
   - ResNet architecture and intersection-over-union (IoU) score evaluation
 - Result:
-  - <img alt="threshold" height="300" src="output_image/best%20thereshold.png" width="500"/>
-  - <img alt="learing rate" height="300" src="output_image/learning%20rate.png" width="600"/>
+  - <img alt="threshold" height="150" src="output_image/best%20thereshold.png" width="250"/>
+  - <img alt="learing rate" height="150" src="output_image/learning%20rate.png" width="300"/>
 - Reflection:
   - The incorrect labeling appears since there are limited training set and imbalanced set. We can not simply dividing set according to the percentage like the image below. The boundaries has very little percentage, and I infer there are catastrophic cancellation caused by computer during computation.
-  - <img alt="reflect" height="300" src="output_image/reflect.jpg" width="600"/>
+  - <img alt="reflect" height="300" src="output_image/reflect.jpg" width="300"/>
   
 ### Experiment Name: Which Encoder-Decoder Architecture workes best?
 
