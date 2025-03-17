@@ -30,6 +30,7 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
   - input 101 -> resize to 512
   - Encoder: ResNet34
   - Decoder: conv3x3 + BN, Upsampling, scSE
-(PS: I haven't run the entire models above because of time and technic limitation, but I tested partical of encoder part and combine with the conclusion from Mr.ybabakhin.)
-- Model 3
+  - (PS: I haven't run the entire models above because of time and technic limitation, but I tested partical of encoder part and combine with the conclusion from Mr.ybabakhin.)
+- Model 3 (inspired by [this work](https://www.kaggle.com/code/meaninglesslives/getting-0-87-on-private-lb-using-kaggle-kernel/notebook))
   - 
+- Result: 
