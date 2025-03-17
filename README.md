@@ -12,4 +12,4 @@ which is a set of images are 101 x 101 pixels and each pixel is classified as ei
   - optimizer = 'adam', Relu activation function
   - ResNet architecture and intersection-over-union (IoU) score evaluation
 - result:
-  <img alt="threshold" height="200" src="output_image/best%20thereshold.png" width="200"/>
+  - <img alt="threshold" height="1256" src="output_image/best%20thereshold.png" width="1914"/>
